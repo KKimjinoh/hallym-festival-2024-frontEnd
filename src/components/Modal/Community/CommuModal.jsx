@@ -160,7 +160,7 @@ const CommuModal = ({ onClose }) => {
     if (forbiddenWordsRegex.test(inputData.context)) {
       setContextMsg("욕설 및 부적절한 내용이 들어가 있습니다.");
     } else {
-      setContextMsg(""); // 에러 메시지를 초기화합니다.
+      setContextMsg(""); //에러 메시지를 초기화합니다.
     }
   }, [inputData.context]);
 

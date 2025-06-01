@@ -29,9 +29,11 @@ const App = () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
+
   useEffect(() => {
     setScreenSize();
   });
+
   return (
     <>
       <QR />
@@ -60,7 +62,7 @@ const App = () => {
           <Route path="/hopeGroundInfo" element={<HopeGroundInfo />} />
           <Route path="/gidam" element={<Gidam />} />
           <Route path="/stageInfo" element={<StageInfo />} />
-          <Route path="/inspection" element={<Inspection/>} />
+          <Route path="/inspection" element={<Inspection />} />
         </Routes>
       </div>
     </>
