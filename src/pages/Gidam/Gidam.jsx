@@ -1,11 +1,11 @@
-import React from "react";
-import "./Gidam.scss";
-import { Background, Header } from "../../components/index.js";
+import React from 'react';
+import './Gidam.scss';
+import { Background, Header } from '../../components/index.js';
 const Gidam = () => {
   return (
     <div className="gidam">
       <Background hasGidam={true} />
-      <Header headcenter={"기담"} hasGidam={true} />
+      <Header headcenter={'기담'} hasGidam={true} />
       <div className="gidam-container">
         <div className="gidam-container-items">
           <div className="paragraph">

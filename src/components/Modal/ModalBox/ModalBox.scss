@@ -7,19 +7,18 @@
   padding: 2%;
   &-startTime {
     color: #3d80cb;
-    font-family: "Pretendard-Bold";
+    font-family: 'Pretendard-Bold';
     font-size: 16px;
   }
   &-lastTime {
     color: #b6b6b6;
-    font-family: "Pretendard-SemiBold";
+    font-family: 'Pretendard-SemiBold';
     font-size: 13px;
   }
   &-description {
     color: #3d80cb;
-    font-family: "Pretendard-Medium";
+    font-family: 'Pretendard-Medium';
     font-size: 10px;
-    word-break: keep-all
-    
+    word-break: keep-all;
   }
 }

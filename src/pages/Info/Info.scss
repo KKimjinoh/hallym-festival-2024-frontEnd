@@ -21,7 +21,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: radial-gradient(
+        background:
+          radial-gradient(
               102.04% 362.09% at 33.88% 16.84%,
               rgba(255, 255, 255, 0) 0%,
               rgba(255, 255, 255, 0.8) 100%
@@ -31,7 +32,7 @@
         border: 1.1px solid rgba(247, 247, 247, 0.4);
         backdrop-filter: blur(20px);
         border-radius: 8px;
-        font-family: "Pretendard-ExtraBold";
+        font-family: 'Pretendard-ExtraBold';
         font-weight: 800;
         font-size: 15px;
         line-height: 18px;

@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import "./BingoInfo.scss";
-import correctImage from "../../../assets/icon/hallym.png";
-import wrongImage from "../../../assets/icon/hallymgray.png";
+import { useState, useEffect } from 'react';
+import './BingoInfo.scss';
+import correctImage from '../../../assets/icon/hallym.png';
+import wrongImage from '../../../assets/icon/hallymgray.png';
 
 const BingoInfo = ({ visible, mode, onSubmit, onClose, bingoCount }) => {
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState('');
 
   useEffect(() => {
     if (mode) {
@@ -21,18 +21,18 @@ const BingoInfo = ({ visible, mode, onSubmit, onClose, bingoCount }) => {
   let title, text1, text2;
 
   if (mode) {
-    title = "빙고 결과 안내";
+    title = '빙고 결과 안내';
     if (bingoCount >= 2) {
-      text1 = "축하합니다 2 빙고 성공 🎉";
-      text2 = "이 화면을 관리자에게 보여주세요";
+      text1 = '축하합니다 2 빙고 성공 🎉';
+      text2 = '이 화면을 관리자에게 보여주세요';
     } else {
-      text1 = "아쉽지만, 2개 이상의 빙고를 달성하지 못하셨습니다.";
-      text2 = "";
+      text1 = '아쉽지만, 2개 이상의 빙고를 달성하지 못하셨습니다.';
+      text2 = '';
     }
   } else {
-    title = "빙고 이벤트 안내";
+    title = '빙고 이벤트 안내';
     text1 = `해당 이벤트는 CLC 희망터에 위치한 이벤트 부스에서 운영됩니다`;
-    text2 = "대면으로 참가해주시길 바랍니다.";
+    text2 = '대면으로 참가해주시길 바랍니다.';
   }
 
   return (

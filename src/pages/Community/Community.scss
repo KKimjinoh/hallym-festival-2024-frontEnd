@@ -25,14 +25,14 @@
         padding: 3%;
         // margin-top: 3%;
         color: rgb(255, 255, 255);
-        font-family: "Pretendard-bold";
+        font-family: 'Pretendard-bold';
       }
       &-board {
         height: 100%;
         width: 100%;
         padding: 5%;
         padding-top: 0px;
-        font-family: "Pretendard-Regular";
+        font-family: 'Pretendard-Regular';
       }
     }
   }
@@ -54,7 +54,7 @@
       float: right;
       height: 50px;
       width: 50px;
-      background-image: url("../AddMemberIcon.svg");
+      background-image: url('../AddMemberIcon.svg');
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;

@@ -1,7 +1,7 @@
-import React from "react";
-import { Background, Header } from "../../components/index.js";
-import "./LineUp.scss";
-import lineupImage from "../../assets/lineup.webp";
+import React from 'react';
+import { Background, Header } from '../../components/index.js';
+import './LineUp.scss';
+import lineupImage from '../../assets/lineup.webp';
 const Lineup = () => {
   return (
     <div className="lineup">

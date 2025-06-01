@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./CommuBoard.scss";
-import CommuDelete from "../Modal/Community/CommuDelete.jsx";
-import { getCommunity } from "../../apis/axios.js";
+import React, { useState, useEffect, useRef } from 'react';
+import './CommuBoard.scss';
+import CommuDelete from '../Modal/Community/CommuDelete.jsx';
+import { getCommunity } from '../../apis/axios.js';
 
 function parseDateTime(dateTimeStr) {
-  const [day, hour, minute, second] = dateTimeStr.split(".");
+  const [day, hour, minute, second] = dateTimeStr.split('.');
   return { day, hour, minute, second };
 }
 
@@ -22,7 +22,7 @@ const CommuBoard = () => {
         setArticle(reversedArticle);
         printDate();
       } catch (error) {
-        console.log("커뮤니티 불러오기 안됨");
+        console.log('커뮤니티 불러오기 안됨');
       }
     };
     fetchCommunityData();
@@ -32,14 +32,11 @@ const CommuBoard = () => {
   const printDate = () => {
     setArticle((prevArticle) => {
       return prevArticle.map((item) => {
-        const formattedTime = new Date(item.upload_time).toLocaleString(
-          "ko-KR",
-          {
-            day: "2-digit",
-            hour: "2-digit",
-            minute: "2-digit",
-          }
-        );
+        const formattedTime = new Date(item.upload_time).toLocaleString('ko-KR', {
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+        });
 
         const fromServerDate = parseDateTime(formattedTime);
 
@@ -57,7 +54,7 @@ const CommuBoard = () => {
             if (fromServerDate.minute < nowMin) {
               item.showDate = `${-1 * (fromServerDate.minute - nowMin)}분 전`;
             } else {
-              item.showDate = "지금";
+              item.showDate = '지금';
             }
           }
         }
@@ -80,19 +77,15 @@ const CommuBoard = () => {
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
 
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [clickDot]);
 
   return (
-    <div
-      className="commuBoard_root"
-      ref={boardRef}
-      onClick={() => clickCloseModal()}
-    >
+    <div className="commuBoard_root" ref={boardRef} onClick={() => clickCloseModal()}>
       {article && (
         <div className="commuBoard_under_root">
           <div className="commuBoard_under_root_under">
@@ -126,9 +119,7 @@ const CommuBoard = () => {
               </div>
             ))}
           </div>
-          {clickDot && (
-            <CommuDelete id={articleID} closeModal={() => setClickDot(false)} />
-          )}
+          {clickDot && <CommuDelete id={articleID} closeModal={() => setClickDot(false)} />}
         </div>
       )}
     </div>

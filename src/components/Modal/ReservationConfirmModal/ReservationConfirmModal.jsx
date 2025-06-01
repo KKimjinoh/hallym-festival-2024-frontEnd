@@ -1,8 +1,8 @@
-import React from "react";
-import "./ReservationConfirmModal.scss";
-import { addReservation } from "../../../apis/axios";
-import moment from "moment";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import './ReservationConfirmModal.scss';
+import { addReservation } from '../../../apis/axios';
+import moment from 'moment';
+import { useNavigate } from 'react-router-dom';
 
 const ReservationConfirmModal = ({ value, onclose }) => {
   const { peapleCount, number, name, phone } = value;
@@ -21,20 +21,20 @@ const ReservationConfirmModal = ({ value, onclose }) => {
     const addReserve = async (data) => {
       try {
         const response = await addReservation(data);
-        console.log("새로운 예약 추가", data);
+        console.log('새로운 예약 추가', data);
         if (response.status === 200) {
-          window.alert("예약에 성공하셨습니다", response);
-          navigate("/home");
-          window.location.reload(); 
+          window.alert('예약에 성공하셨습니다', response);
+          navigate('/home');
+          window.location.reload();
           return response;
         } else {
-          throw new Error("예약에 실패했습니다.");
+          throw new Error('예약에 실패했습니다.');
         }
       } catch (error) {
-        console.error("예약 실패", error);
-        window.alert("예약에 실패하셨습니다");
-        navigate("/home");
-        window.location.reload(); 
+        console.error('예약 실패', error);
+        window.alert('예약에 실패하셨습니다');
+        navigate('/home');
+        window.location.reload();
       }
     };
     addReserve(data);

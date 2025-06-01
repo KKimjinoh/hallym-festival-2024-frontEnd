@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "./HopeGroundInfo.scss";
-import { Background, Header } from "../../components/index.js";
-import arrowLeft from "../../assets/icon/arrow-left.png";
-import arrowRight from "../../assets/icon/arrow-right.png";
-import MovieIcon from "../../assets/icon/movie.png";
-import PersonIcon from "../../assets/icon/person.png";
-import TimeIcon from "../../assets/icon/time.png";
-import HopeList from "../../datas/hopeground.json";
-import ModalBox from "../../components/Modal/ModalBox/ModalBox.jsx";
+import React, { useState, useEffect } from 'react';
+import './HopeGroundInfo.scss';
+import { Background, Header } from '../../components/index.js';
+import arrowLeft from '../../assets/icon/arrow-left.png';
+import arrowRight from '../../assets/icon/arrow-right.png';
+import MovieIcon from '../../assets/icon/movie.png';
+import PersonIcon from '../../assets/icon/person.png';
+import TimeIcon from '../../assets/icon/time.png';
+import HopeList from '../../datas/hopeground.json';
+import ModalBox from '../../components/Modal/ModalBox/ModalBox.jsx';
 
 const HopeGroundInfo = () => {
   const [data, setData] = useState({});
@@ -18,21 +18,17 @@ const HopeGroundInfo = () => {
   }, [currentItemIndex]);
 
   const nextItem = () => {
-    setCurrentItemIndex((prevIndex) =>
-      prevIndex === HopeList.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentItemIndex((prevIndex) => (prevIndex === HopeList.length - 1 ? 0 : prevIndex + 1));
   };
 
   const prevItem = () => {
-    setCurrentItemIndex((prevIndex) =>
-      prevIndex === 0 ? HopeList.length - 1 : prevIndex - 1
-    );
+    setCurrentItemIndex((prevIndex) => (prevIndex === 0 ? HopeList.length - 1 : prevIndex - 1));
   };
 
   return (
     <div className="hopeGroundInfo">
       <Background />
-      <Header headcenter={"희망터 부스"} />
+      <Header headcenter={'희망터 부스'} />
       <div className="hopeGroundInfo-container">
         <div className="hopeGroundInfo-container-wrapper">
           <div className="hopeGroundInfo-container-wrapper-images">
@@ -56,11 +52,11 @@ const HopeGroundInfo = () => {
                 {data.contents ? (
                   data.contents.map((content, index) => (
                     <div className="contents" key={index}>
-                      <p id="boldText" style={{ marginBottom: "1%" }}>
+                      <p id="boldText" style={{ marginBottom: '1%' }}>
                         {content.title}
                       </p>
-                      <div id="normalText" style={{ marginBottom: "5%" }}>
-                        {content.content.split("\n").map((line, index) => (
+                      <div id="normalText" style={{ marginBottom: '5%' }}>
+                        {content.content.split('\n').map((line, index) => (
                           <span key={index}>
                             {line}
                             <br />
@@ -71,7 +67,7 @@ const HopeGroundInfo = () => {
                   ))
                 ) : data.content ? (
                   <div id="normalText">
-                    {data.content.split("\n").map((line, index) => (
+                    {data.content.split('\n').map((line, index) => (
                       <span key={index}>
                         {line}
                         <br />
@@ -81,9 +77,7 @@ const HopeGroundInfo = () => {
                 ) : (
                   <p>내용이 없습니다.</p>
                 )}
-                <div>
-                  {data.caution ? <p id="cationText">{data.caution}</p> : <></>}
-                </div>
+                <div>{data.caution ? <p id="cationText">{data.caution}</p> : <></>}</div>
               </div>
 
               <div className="hopeGroundInfo-container-wrapper-modal-body-date">

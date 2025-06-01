@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import "./CommuDelete.scss";
-import { deleteCommunityDetail } from "../../../apis/axios";
+import React, { useState } from 'react';
+import './CommuDelete.scss';
+import { deleteCommunityDetail } from '../../../apis/axios';
 const CommuDelete = ({ id, closeModal }) => {
-  const [password, setPassword] = useState("");
-  const [pwSame, setPwSame] = useState("");
-  const errorMsg = "비밀번호가 일치하지 않습니다.";
+  const [password, setPassword] = useState('');
+  const [pwSame, setPwSame] = useState('');
+  const errorMsg = '비밀번호가 일치하지 않습니다.';
 
   const deleteArticle = async () => {
     try {
       const result = await deleteCommunityDetail(id, password);
-      console.log("result가 true가 아님");
+      console.log('result가 true가 아님');
       if (result) {
         closeModal();
       } else {
@@ -17,7 +17,7 @@ const CommuDelete = ({ id, closeModal }) => {
       }
     } catch (error) {
       console.log(error);
-      alert("비밀번호가 일치하지 않습니다.");
+      alert('비밀번호가 일치하지 않습니다.');
     }
   };
 
@@ -31,9 +31,7 @@ const CommuDelete = ({ id, closeModal }) => {
 
         <div className="delete-body-input">
           <input
-            style={
-              pwSame === errorMsg ? { borderBottom: "#f70505 1px solid" } : null
-            }
+            style={pwSame === errorMsg ? { borderBottom: '#f70505 1px solid' } : null}
             type="password"
             value={password}
             placeholder="숫자 4자리를 입력하세요"
@@ -42,7 +40,7 @@ const CommuDelete = ({ id, closeModal }) => {
         </div>
         <div
           className="delete-body-notice"
-          style={pwSame === errorMsg ? { color: "#f70505" } : null}
+          style={pwSame === errorMsg ? { color: '#f70505' } : null}
         >
           {pwSame}
         </div>

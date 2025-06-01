@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Start.scss";
-import logo1 from "../../assets/logo1.webp";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Start.scss';
+import logo1 from '../../assets/logo1.webp';
 
 const Start = () => {
   const navigate = useNavigate();
@@ -11,15 +11,15 @@ const Start = () => {
   const handleClick = () => {
     setClicked(true); // 클릭 이벤트 발생시 clicked 상태를 true로 변경
     setTimerStarted(true);
-    console.log("클릭 발생");
+    console.log('클릭 발생');
     setTimeout(() => {
-      navigate("/home"); // 전환할 페이지 경로
+      navigate('/home'); // 전환할 페이지 경로
     }, 1000);
   };
 
   return (
     <div
-      className={`start ${clicked ? "clicked" : ""}`}
+      className={`start ${clicked ? 'clicked' : ''}`}
       onClick={!timerStarted ? handleClick : null}
     >
       <div className="start-background">

@@ -1,14 +1,12 @@
-.Inspection{
-    margin-top: 50%;
+.Inspection {
+  margin-top: 50%;
 
+  & hr {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
 
-
-    & hr{
-        margin-top: 2%;
-        margin-bottom: 5%;
-    }
-
-    & p{
-        text-align: center;
-    }
+  & p {
+    text-align: center;
+  }
 }

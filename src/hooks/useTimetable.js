@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 export const useTimetable = (value, initialValue, timetable) => {
   const [pageIndex, setPageIndex] = useState(initialValue); // 페이지 인덱스 설정
 

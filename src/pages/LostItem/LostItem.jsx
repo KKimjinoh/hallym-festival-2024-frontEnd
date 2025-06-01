@@ -1,10 +1,10 @@
-import React from "react";
-import Footer from "../../components/Layout/Footer";
-import "./LostItem.scss";
-import { getLostList } from "../../apis/axios.js";
-import { Header } from "../../components/index.js";
-import Background from "../../components/Layout/Background.jsx";
-import { useEffect, useState } from "react";
+import React from 'react';
+import Footer from '../../components/Layout/Footer';
+import './LostItem.scss';
+import { getLostList } from '../../apis/axios.js';
+import { Header } from '../../components/index.js';
+import Background from '../../components/Layout/Background.jsx';
+import { useEffect, useState } from 'react';
 const LostItem = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
@@ -15,14 +15,11 @@ const LostItem = () => {
       try {
         await getLostList().then((res) => {
           const newTime = res.data.map((item) => {
-            const formattedTime = new Date(item.upload_time).toLocaleString(
-              "ko-KR",
-              {
-                day: "2-digit",
-                hour: "2-digit",
-                minute: "2-digit",
-              }
-            );
+            const formattedTime = new Date(item.upload_time).toLocaleString('ko-KR', {
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+            });
             return { ...item, upload_time: formattedTime };
           });
 
@@ -30,9 +27,9 @@ const LostItem = () => {
           setLoad(true);
           console.log(res.data[0].upload_time);
         });
-        console.log("데이터 수신");
+        console.log('데이터 수신');
       } catch (e) {
-        console.error("데이터 에러", e);
+        console.error('데이터 에러', e);
       }
     };
     dataList();
@@ -41,7 +38,7 @@ const LostItem = () => {
   return (
     <div className="lostItem">
       <Background hasPub={true} />
-      <Header headcenter={"축제 분실물 찾기"} />
+      <Header headcenter={'축제 분실물 찾기'} />
 
       {load ? (
         <div className="list_wrapper">

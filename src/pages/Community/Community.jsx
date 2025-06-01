@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { Background, Header } from "../../components/index.js";
-import CommuBoard from "../../components/CommunityComponents/CommuBoard.jsx";
-import CommuModal from "../../components/Modal/Community/CommuModal.jsx";
-import "./Community.scss";
+import React, { useState } from 'react';
+import { Background, Header } from '../../components/index.js';
+import CommuBoard from '../../components/CommunityComponents/CommuBoard.jsx';
+import CommuModal from '../../components/Modal/Community/CommuModal.jsx';
+import './Community.scss';
 
 const Community = () => {
   const clickOut = () => {
-    localStorage.setItem("clickOutSide", true);
-    console.log("모달 밖", localStorage.getItem("clickOutSide"));
+    localStorage.setItem('clickOutSide', true);
+    console.log('모달 밖', localStorage.getItem('clickOutSide'));
   };
   const [postMocal, setPostModal] = useState(false);
 
@@ -25,8 +25,8 @@ const Community = () => {
         <div className="community-container-wrapper" onClick={() => clickOut()}>
           <div className="community-container-wrapper-notice">
             <div>
-              해당 커뮤니티는 축제 관련 커뮤니티입니다.<br></br>축제 커뮤니티에
-              부적절한 내용은 <br></br>필터링 및 법적 조치가 진행될 수 있습니다.
+              해당 커뮤니티는 축제 관련 커뮤니티입니다.<br></br>축제 커뮤니티에 부적절한 내용은{' '}
+              <br></br>필터링 및 법적 조치가 진행될 수 있습니다.
             </div>
           </div>
           {!postMocal && (

@@ -1,18 +1,17 @@
-import { Background } from "../../components";
-import React, { useEffect, useRef, useState } from "react";
-import ReservationInfoComponent from "../../components/ReservationInfoComponent/ReservationInfoComponent";
-import "./ReservationInformation.scss";
-import { Header } from "../../components/index.js";
-import { findReservation } from "../../apis/axios";
+import { Background } from '../../components';
+import React, { useEffect, useRef, useState } from 'react';
+import ReservationInfoComponent from '../../components/ReservationInfoComponent/ReservationInfoComponent';
+import './ReservationInformation.scss';
+import { Header } from '../../components/index.js';
+import { findReservation } from '../../apis/axios';
 
 const ReservationInformation = () => {
   const [number, setNumber] = useState(0);
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [open, setOpen] = useState(false);
   const [isRes, setIsRes] = useState(false);
   const [data, setData] = useState({
-
-    studentName: "",
+    studentName: '',
     phone_number: 0,
     studentNum: 0,
     people_count: 0,
@@ -27,7 +26,7 @@ const ReservationInformation = () => {
     const findReserve = async (findData) => {
       try {
         const response = await findReservation(findData);
-        console.log("새로운 예약 추가", findData);
+        console.log('새로운 예약 추가', findData);
         if (response.status === 200) {
           setData(response.data);
           setIsRes(true);
@@ -36,7 +35,7 @@ const ReservationInformation = () => {
         }
       } catch (error) {
         setIsRes(false);
-        console.error("예약 실패", error);
+        console.error('예약 실패', error);
       }
     };
 
@@ -58,9 +57,7 @@ const ReservationInformation = () => {
           <div className="input_wrapper">
             <label htmlFor="numberInput">
               <label htmlFor="nameInput">
-                <div className="labeldiv">
-                  예약 시 작성하신 성함을 입력해주세요
-                </div>
+                <div className="labeldiv">예약 시 작성하신 성함을 입력해주세요</div>
                 <input
                   id="nameInput"
                   className="input_box"
@@ -70,9 +67,7 @@ const ReservationInformation = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </label>
-              <div className="labeldiv">
-                예약 시 작성하신 학번을 입력해주세요
-              </div>
+              <div className="labeldiv">예약 시 작성하신 학번을 입력해주세요</div>
               <input
                 id="numberInput"
                 className="input_box"

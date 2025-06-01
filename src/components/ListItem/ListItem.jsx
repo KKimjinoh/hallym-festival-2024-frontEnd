@@ -1,4 +1,4 @@
-import "./Listitem.scss";
+import './Listitem.scss';
 
 const ListItem = ({ booth_name, content, url }) => {
   return (

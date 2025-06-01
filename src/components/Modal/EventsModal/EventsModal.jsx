@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import "./EventsModal.scss";
+import React, { useState } from 'react';
+import './EventsModal.scss';
 const EventsModal = ({ question, onSubmit, onClose }) => {
-  const [userAnswer, setUserAnswer] = useState("");
+  const [userAnswer, setUserAnswer] = useState('');
 
   const handleChange = (e) => setUserAnswer(e.target.value);
 
   const handleSubmit = () => {
     onSubmit(userAnswer);
-    setUserAnswer("");
+    setUserAnswer('');
   };
 
   return (

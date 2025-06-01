@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Board } from "../../components/index.js";
-import "./PlaygroundInfo.scss";
-import boothList from "../../datas/booth.json";
-import { Header, Background } from "../../components/index.js";
+import React, { useEffect, useState } from 'react';
+import { Board } from '../../components/index.js';
+import './PlaygroundInfo.scss';
+import boothList from '../../datas/booth.json';
+import { Header, Background } from '../../components/index.js';
 const PlaygroundInfo = () => {
   const [data, setData] = useState([]);
 

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Background from "../../components/Layout/Background";
-import "./Goods.scss";
-import { Header } from "../../components/index.js";
-import goods from "../../datas/goods.json";
+import React, { useState, useEffect } from 'react';
+import Background from '../../components/Layout/Background';
+import './Goods.scss';
+import { Header } from '../../components/index.js';
+import goods from '../../datas/goods.json';
 
 const Goods = () => {
   const [data, setData] = useState([]);
@@ -21,10 +21,7 @@ const Goods = () => {
       <Header headcenter="굿즈" />
       <div className="goods-container">
         <div className="goods-container-message">
-          <p>
-            * CLC 희망터 "이벤트 굿즈샵" 부스에서 구매 및 이벤트 참여
-            가능합니다.
-          </p>
+          <p>* CLC 희망터 "이벤트 굿즈샵" 부스에서 구매 및 이벤트 참여 가능합니다.</p>
         </div>
         <div className="goods-container-wrapper">
           <div className="goods-container-wrapper-board">

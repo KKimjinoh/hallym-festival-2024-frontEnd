@@ -1,7 +1,7 @@
-import React from "react";
-import movie from "../../../assets/icon/movie.png";
-import "./ModalContent.scss";
-import ModalBox from "../ModalBox/ModalBox";
+import React from 'react';
+import movie from '../../../assets/icon/movie.png';
+import './ModalContent.scss';
+import ModalBox from '../ModalBox/ModalBox';
 
 function ModalContent({ title, location, contents }) {
   return (

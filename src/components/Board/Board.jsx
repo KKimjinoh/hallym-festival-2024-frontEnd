@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./Board.scss";
+import React, { useEffect, useState } from 'react';
+import './Board.scss';
 
 const Board = ({ data }) => {
   const [load, setLoad] = useState(false);
@@ -34,7 +34,7 @@ const Board = ({ data }) => {
                 <div
                   id="text2"
                   dangerouslySetInnerHTML={{
-                    __html: it.content.replace(/\n/g, "<br>"),
+                    __html: it.content.replace(/\n/g, '<br>'),
                   }}
                 ></div>
               </div>

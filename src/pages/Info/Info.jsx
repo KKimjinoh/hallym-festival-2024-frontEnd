@@ -1,7 +1,7 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Background, Header } from "../../components/index.js";
-import "./Info.scss";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Background, Header } from '../../components/index.js';
+import './Info.scss';
 
 const Info = () => {
   const navigate = useNavigate();
@@ -14,14 +14,14 @@ const Info = () => {
         <div className="Info-container-infoWrapper">
           <div
             className="Info-container-infoWrapper-infoBox"
-            onClick={() => navigate("/boothinfo")}
+            onClick={() => navigate('/boothinfo')}
           >
             부스 안내
           </div>
           <div
             className="Info-container-infoWrapper-infoBox"
             onClick={() => {
-              navigate("/stageInfo");
+              navigate('/stageInfo');
             }}
           >
             무대 안내
@@ -29,22 +29,16 @@ const Info = () => {
           <div
             className="Info-container-infoWrapper-infoBox"
             onClick={() => {
-              navigate("/gidam");
+              navigate('/gidam');
             }}
           >
             기담 안내
           </div>
 
-          <div
-            className="Info-container-infoWrapper-infoBox"
-            onClick={() => navigate("/pubInfo")}
-          >
+          <div className="Info-container-infoWrapper-infoBox" onClick={() => navigate('/pubInfo')}>
             주점 안내
           </div>
-          <div
-            className="Info-container-infoWrapper-infoBox"
-            onClick={() => navigate("/notice")}
-          >
+          <div className="Info-container-infoWrapper-infoBox" onClick={() => navigate('/notice')}>
             공지사항
           </div>
         </div>
