@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Background from '../../components/Layout/Background';
 import ReservationWait from '../../components/Modal/ReservationWaitModal/ReservationWaitModal.jsx';
 import moment from 'moment';
-import { Header } from '../../components/index.js';
+import { Header } from '@/Layout';
 import ReservationPriviteModal from '../../components/Modal/ReservationPriviteModal/ReservationPriviteModal.jsx';
 import { useNavigate } from 'react-router-dom';
 import './ReservationDetail.scss';

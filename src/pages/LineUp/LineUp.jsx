@@ -1,5 +1,5 @@
 import React from 'react';
-import { Background, Header } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 import './LineUp.scss';
 import lineupImage from '../../assets/lineup.webp';
 const Lineup = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Background, Header } from '../../components/index.js';
-import CommuBoard from '../../components/CommunityComponents/CommuBoard.jsx';
+import { Header, Background } from '@/Layout';
+import CommunityBoard from '../../components/Community/CommunityBoard.jsx';
 import CommuModal from '../../components/Modal/Community/CommuModal.jsx';
 import './Community.scss';
 
@@ -32,7 +32,7 @@ const Community = () => {
           {!postMocal && (
             <>
               <div className="community-container-wrapper-board">
-                <CommuBoard />
+                <CommunityBoard />
               </div>
               <div className="post_bnt_wrapper">
                 <div

@@ -1,7 +1,7 @@
 import './ReservationInfoComponent.scss';
 import { useNavigate } from 'react-router-dom';
 
-const ReservationInfoComponent = ({ data, isRes }) => {
+const ReservationStatus = ({ data, isRes }) => {
   const navigate = useNavigate();
 
   return (
@@ -36,4 +36,4 @@ const ReservationInfoComponent = ({ data, isRes }) => {
   );
 };
 
-export default ReservationInfoComponent;
+export default ReservationStatus;

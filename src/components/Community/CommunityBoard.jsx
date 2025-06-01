@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './CommuBoard.scss';
+import './CommunityBoard.scss';
 import CommuDelete from '../Modal/Community/CommuDelete.jsx';
 import { getCommunity } from '../../apis/axios.js';
 
@@ -8,7 +8,7 @@ function parseDateTime(dateTimeStr) {
   return { day, hour, minute, second };
 }
 
-const CommuBoard = () => {
+const CommunityBoard = () => {
   const [clickDot, setClickDot] = useState(false);
   const [articleID, setArticleID] = useState(-1);
   const [article, setArticle] = useState([]);
@@ -126,4 +126,4 @@ const CommuBoard = () => {
   );
 };
 
-export default CommuBoard;
+export default CommunityBoard;

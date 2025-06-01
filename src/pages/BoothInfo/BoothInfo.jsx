@@ -1,7 +1,7 @@
 import React from 'react';
 import './Boothinfo.scss';
 import { useNavigate } from 'react-router-dom';
-import { Header, Background } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 const BoothInfo = () => {
   const navigate = useNavigate();
   const handlePlaygroundInfo = () => {

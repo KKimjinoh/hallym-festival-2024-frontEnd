@@ -1,6 +1,6 @@
 import React from 'react';
 import './PubInfo.scss';
-import { Background, Header } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 
 const PubInfo = () => {
   return (

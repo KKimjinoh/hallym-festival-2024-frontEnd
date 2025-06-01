@@ -1,7 +1,6 @@
 import React from 'react';
-import Background from '../../components/Layout/Background';
 import './Reservation.scss';
-import { Header } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 import { useNavigate } from 'react-router-dom';
 
 const Reservation = () => {

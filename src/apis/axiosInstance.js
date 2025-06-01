@@ -2,11 +2,13 @@ import axios from 'axios';
 import rateLimit from 'axios-rate-limit';
 
 const createInstance = axios.create({
-  baseURL: 'https://kim-sun-woo.com/api', // 기본 URL 설정
-  timeout: 60000, // 요청 타임아웃(ms)
+  baseURL: import.meta.env.VITE_BASEURL,
+  timeout: 60000,
 });
+
 const axiosInstance = rateLimit(createInstance, {
   maxRequests: 10,
   perMilliseconds: 1000,
 });
+
 export default axiosInstance;

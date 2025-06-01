@@ -1,8 +1,7 @@
-import { Background } from '../../components';
-import React, { useEffect, useRef, useState } from 'react';
-import ReservationInfoComponent from '../../components/ReservationInfoComponent/ReservationInfoComponent';
+import React, { useState } from 'react';
+import ReservationStatus from '../../components/Reservation/Status/ReservationStatus';
 import './ReservationInformation.scss';
-import { Header } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 import { findReservation } from '../../apis/axios';
 
 const ReservationInformation = () => {
@@ -50,7 +49,7 @@ const ReservationInformation = () => {
       <h2 className="ReservationWaith2"></h2>
 
       {open ? (
-        <ReservationInfoComponent isRes={isRes} data={data} />
+        <ReservationStatus isRes={isRes} data={data} />
       ) : (
         <div className="form_wrapper">
           <h2 className="res_info_wrapper">예약확인</h2>

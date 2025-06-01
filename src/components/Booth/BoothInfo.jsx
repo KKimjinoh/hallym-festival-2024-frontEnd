@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Board.scss';
 
-const Board = ({ data }) => {
+const BoothInfo = ({ data }) => {
   const [load, setLoad] = useState(false);
   const [openMdl, setOpenMdl] = useState(false);
 
@@ -60,4 +60,4 @@ const Board = ({ data }) => {
   );
 };
 
-export default Board;
+export default BoothInfo;

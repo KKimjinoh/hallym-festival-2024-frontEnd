@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from '../../components/index.js';
 import './Notice.scss';
 import { getNoticeList } from '../../apis/axios.js';
-import { Background } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 
 const Notice = () => {
   const [notices, setNotices] = useState([]);

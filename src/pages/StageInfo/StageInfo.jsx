@@ -1,5 +1,5 @@
 import React from 'react';
-import { Background, Header } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 import ModalContent from '../../components/Modal/ModalContent/ModalContent.jsx';
 import { useTimetable } from '../../hooks/useTimetable.js';
 import timetable from '../../datas/timetable.json';

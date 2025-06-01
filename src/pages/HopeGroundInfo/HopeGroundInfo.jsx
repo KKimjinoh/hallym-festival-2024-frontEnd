@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HopeGroundInfo.scss';
-import { Background, Header } from '../../components/index.js';
+
+import { Header, Background } from '@/Layout';
+
 import arrowLeft from '../../assets/icon/arrow-left.png';
 import arrowRight from '../../assets/icon/arrow-right.png';
 import MovieIcon from '../../assets/icon/movie.png';

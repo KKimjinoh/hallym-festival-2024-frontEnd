@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './ReservationForm.scss';
-import { getReservation } from '../../apis/axios';
+import { getReservation } from '../../../apis/axios';
 import ReservationConfirmModal from '../Modal/ReservationConfirmModal/ReservationConfirmModal';
 import { useNavigate } from 'react-router-dom';
 import { useCallback } from 'react';

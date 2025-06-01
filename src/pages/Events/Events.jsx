@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Background, Header } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
 import BingoInfo from '../../components/Modal/BingoInfo/BingoInfo.jsx';
 import EventsModal from '../../components/Modal/EventsModal/EventsModal.jsx';
 import { useNavigate } from 'react-router-dom';

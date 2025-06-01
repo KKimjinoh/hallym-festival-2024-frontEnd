@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Background, Header } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
+
 import './Info.scss';
 
 const Info = () => {

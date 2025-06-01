@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Board } from '../../components/index.js';
+import { BoothInfo } from '../../components/index.js';
 import './PlaygroundInfo.scss';
 import boothList from '../../datas/booth.json';
-import { Header, Background } from '../../components/index.js';
+import { Header, Background } from '@/Layout';
+
 const PlaygroundInfo = () => {
   const [data, setData] = useState([]);
 
@@ -17,7 +18,7 @@ const PlaygroundInfo = () => {
       <div className="playgroundInfo-container">
         <div className="playgroundInfo-container-wrapper">
           {/* <img src={booth} alt="운동장 부스 배치도" className="booth-image" /> */}
-          <Board data={data} />
+          <BoothInfo data={data} />
         </div>
       </div>
     </div>
