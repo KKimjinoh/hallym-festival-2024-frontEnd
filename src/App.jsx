@@ -1,69 +1,66 @@
-import './App.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home.jsx';
-import NotFound from './pages/NotFound/NotFound.jsx';
-import Info from './pages/Info/Info.jsx';
-import GoodsAndEvents from './pages/GoodsAndEvents/GoodsAndEvents.jsx';
-import LostItem from './pages/LostItem/LostItem.jsx';
-import PromotionalVideo from './pages/PromotionalVideo/PromotionalVideo.jsx';
-import Reservation from './pages/Reservation/Reservation.jsx';
-import Community from './pages/Community/Community.jsx';
-import QR from './pages/QR/QR.jsx';
-import BoothInfo from './pages/BoothInfo/BoothInfo.jsx';
+import './App.css';
+import useViewPort from './hooks/useViewport';
+
+import Home from './pages/Home/index.jsx';
+import NotFound from './pages/NotFound/index.jsx';
+import Info from './pages/Info/index.jsx/index.js';
+import GoodsPromotion from './pages/GoodsPromotion/index.jsx/index.js';
+import LostItem from './pages/LostItem/index.jsx';
+import PromotionalVideo from './pages/PromotionalVideo/index.jsx';
+import Reservation from './pages/Reservation/index.jsx';
+import Community from './pages/Community/index.jsx';
+import DesktopUI from './Layout/DesktopUI/DesktopUI.jsx';
+import BoothSelector from './pages/Info/Booth/BoothSelector/index.jsx';
 import Notice from './pages/Notice/Notice.jsx';
-import Start from './pages/Start/Start.jsx';
-import Lineup from './pages/LineUp/LineUp.jsx';
-import PubInfo from './pages/PubInfo/PubInfo.jsx';
-import ReservationInformation from './pages/ReservationInformation/ReservationInformation.jsx';
-import ReservationDetail from './pages/ReservationDetail/ReservationDetail.jsx';
-import Goods from './pages/Goods/Goods.jsx';
-import Events from './pages/Events/Events.jsx';
-import PlaygroundInfo from './pages/PlaygroundInfo/PlaygroundInfo.jsx';
-import HopeGroundInfo from './pages/HopeGroundInfo/HopeGroundInfo.jsx';
-import Gidam from './pages/Gidam/Gidam.jsx';
-import StageInfo from './pages/StageInfo/StageInfo.jsx';
-import Inspection from './pages/Inspection/Inspection.jsx';
+import Landing from './pages/Landing/index.jsx';
+import Lineup from './pages/LineUp/index.jsx';
+import Pub from './pages/Info/Pub/index.jsx';
+import Information from './pages/Reservation/Information/index.jsx';
+import ReservationDetail from './pages/Reservation/Detail/index.jsx';
+import Goods from './pages/GoodsPromotion/Goods/index.jsx';
+import Bingo from './pages/GoodsPromotion/Bingo/index.jsx';
+import HopeGround from './pages/Info/Booth/HopeGround/index.jsx';
+import Gidam from './pages/Info/Gidam/index.jsx';
+import Inspection from './pages/Inspection/index.jsx';
+import Playground from './pages/Info/Booth/Playground';
+import Stage from './pages/Info/Stage';
 
 const App = () => {
-  function setScreenSize() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-
-  useEffect(() => {
-    setScreenSize();
-  });
+  useViewPort();
 
   return (
     <>
-      <QR />
+      <DesktopUI />
       <div className="content">
         <Routes>
-          <Route path="/" exact={true} element={<Start />} />
+          <Route path="/" exact={true} element={<Landing />} />
           <Route path="/home" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/boothinfo" element={<BoothInfo />} />
-          <Route path="/notice" element={<Notice />} />
-          <Route path="/goodsAndEvents" element={<GoodsAndEvents />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/lineup" element={<Lineup />} />
           <Route path="/lostItem" element={<LostItem />} />
           <Route path="/promotionalVideo" element={<PromotionalVideo />} />
-          <Route path="/reservation" element={<Reservation />} />
-          <Route path="/lineup" element={<Lineup />} />
-          <Route path="/pubInfo" element={<PubInfo />} />
-          <Route path="/reservationInfo" element={<ReservationInformation />} />
-          <Route path="/reservationDetail" element={<ReservationDetail />} />
-          <Route path="/reservationInfo" element={<ReservationInformation />} />
-          <Route path="/reservationDetail" element={<ReservationDetail />} />
+          {/* goodsPromotion */}
+          <Route path="/goodsAndEvents" element={<GoodsPromotion />} />
           <Route path="/goods" element={<Goods />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/playgroundInfo" element={<PlaygroundInfo />} />
-          <Route path="/hopeGroundInfo" element={<HopeGroundInfo />} />
+          <Route path="/events" element={<Bingo />} />
+          {/* info */}
+          <Route path="/info" element={<Info />} />
+          <Route path="/boothinfo" element={<BoothSelector />} />
+          <Route path="/hopeGroundInfo" element={<HopeGround />} />
+          <Route path="/playgroundInfo" element={<Playground />} />
+          <Route path="/notice" element={<Notice />} />
+          <Route path="/pubInfo" element={<Pub />} />
+          <Route path="/stageInfo" element={<Stage />} />
           <Route path="/gidam" element={<Gidam />} />
-          <Route path="/stageInfo" element={<StageInfo />} />
+          {/* reservation */}
+          <Route path="/reservation" element={<Reservation />} />
+          <Route path="/reservationInfo" element={<Information />} />
+          <Route path="/reservationDetail" element={<ReservationDetail />} />
+          {/* system */}
           <Route path="/inspection" element={<Inspection />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </>

@@ -1,0 +1,44 @@
+import React, { useEffect, useState } from 'react';
+import Background from '../../components/Layout/Background';
+import ReservationWait from '../../components/Modal/ReservationWaitModal/ReservationWaitModal.jsx';
+import moment from 'moment';
+import { Header } from '@/Layout';
+import ReservationPriviteModal from '../../components/Modal/ReservationPriviteModal/ReservationPriviteModal.jsx';
+import { useNavigate } from 'react-router-dom';
+import './index.module.scss';
+
+const ReservationDetail = () => {
+  const [open, setOpen] = useState(false);
+  const [nowTime, setNowTime] = useState(moment().format('HH:mm:ss'));
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timeFormated = moment(nowTime, 'HH:mm:ss');
+
+    if (
+      timeFormated.isAfter(moment('08:30:00', 'HH:mm:ss')) &&
+      timeFormated.isBefore(moment('09:30:00', 'HH:mm:ss'))
+    ) {
+      console.log('시간');
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  }, [nowTime]);
+
+  return (
+    <div className="ReservationDetail">
+      <Background />
+      <Header />
+
+      {open ? (
+        <ReservationPriviteModal />
+      ) : (
+        //  전지회용으로 대기창 잠시 없앰
+        <ReservationPriviteModal />
+        //<ReservationWait nowTime={nowTime} />
+      )}
+    </div>
+  );
+};
+
+export default ReservationDetail;
