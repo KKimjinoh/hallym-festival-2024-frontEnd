@@ -24,6 +24,7 @@ import HopeGroundInfo from "./pages/HopeGroundInfo/HopeGroundInfo.jsx";
 import Gidam from "./pages/Gidam/Gidam.jsx";
 import StageInfo from "./pages/StageInfo/StageInfo.jsx";
 import Inspection from "./pages/Inspection/Inspection.jsx";
+
 const App = () => {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
