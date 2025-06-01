@@ -91,4 +91,4 @@
    <img src="https://github.com/user-attachments/assets/fdc93e3a-99fa-4f7e-a27c-48ea915b39cd" width="50%" />
 
 8. **이벤트 페이지**  
-    <img src="https://github.com/user-attachments/assets/5952df14-1528-41c6-8530-568cf821571c" width="50%" />
+   <img src="https://github.com/user-attachments/assets/5952df14-1528-41c6-8530-568cf821571c" width="50%" />
