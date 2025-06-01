@@ -1,6 +1,6 @@
 ---
-name: Refacgtoring Progress
-about: 코드 리펙터링 프로그레스 설계
+name: Refacgtoring Process
+about: 코드 리펙터링 프로세스
 title: ''
 labels: Refactor
 assignees: Nohgh
