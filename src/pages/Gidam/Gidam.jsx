@@ -1,6 +1,6 @@
 import React from 'react';
+import { Background, Header } from '@/Layout';
 import './Gidam.scss';
-import { Background, Header } from '../../components/index.js';
 const Gidam = () => {
   return (
     <div className="gidam">
