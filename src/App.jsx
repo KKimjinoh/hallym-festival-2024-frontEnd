@@ -2,31 +2,31 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import useViewPort from './hooks/useViewport';
-
-import Home from './pages/Home/index.jsx';
-import NotFound from './pages/NotFound/index.jsx';
-import Info from './pages/Info/index.jsx/index.js';
-import GoodsPromotion from './pages/GoodsPromotion/index.jsx/index.js';
-import LostItem from './pages/LostItem/index.jsx';
-import PromotionalVideo from './pages/PromotionalVideo/index.jsx';
-import Reservation from './pages/Reservation/index.jsx';
-import Community from './pages/Community/index.jsx';
-import DesktopUI from './Layout/DesktopUI/DesktopUI.jsx';
-import BoothSelector from './pages/Info/Booth/BoothSelector/index.jsx';
-import Notice from './pages/Notice/Notice.jsx';
-import Landing from './pages/Landing/index.jsx';
-import Lineup from './pages/LineUp/index.jsx';
-import Pub from './pages/Info/Pub/index.jsx';
-import Information from './pages/Reservation/Information/index.jsx';
-import ReservationDetail from './pages/Reservation/Detail/index.jsx';
-import Goods from './pages/GoodsPromotion/Goods/index.jsx';
-import Bingo from './pages/GoodsPromotion/Bingo/index.jsx';
-import HopeGround from './pages/Info/Booth/HopeGround/index.jsx';
-import Gidam from './pages/Info/Gidam/index.jsx';
-import Inspection from './pages/Inspection/index.jsx';
-import Playground from './pages/Info/Booth/Playground';
-import Stage from './pages/Info/Stage';
-
+import { DesktopUI } from './Layout';
+import {
+  Landing,
+  Home,
+  Community,
+  Lineup,
+  LostItem,
+  PromotionalVideo,
+  GoodsPromotion,
+  Goods,
+  Bingo,
+  Info,
+  BoothSelector,
+  HopeGround,
+  Playground,
+  Notice,
+  Pub,
+  Stage,
+  Gidam,
+  Reservation,
+  Information,
+  ReservationDetail,
+  Inspection,
+  NotFound,
+} from './pages';
 const App = () => {
   useViewPort();
 

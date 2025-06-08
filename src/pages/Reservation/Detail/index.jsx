@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Background from '../../components/Layout/Background';
-import ReservationWait from '../../components/Modal/ReservationWaitModal/ReservationWaitModal.jsx';
+import Background from '@/Layout/Background';
 import moment from 'moment';
 import { Header } from '@/Layout';
-import ReservationPriviteModal from '../../components/Modal/ReservationPriviteModal/ReservationPriviteModal.jsx';
-import { useNavigate } from 'react-router-dom';
+import ReservationPriviteModal from '@/Layout/Modal/ReservationPriviteModal/ReservationPriviteModal.jsx';
 import './index.module.scss';
 
 const ReservationDetail = () => {
   const [open, setOpen] = useState(false);
-  const [nowTime, setNowTime] = useState(moment().format('HH:mm:ss'));
-  const navigate = useNavigate();
+  const [nowTime] = useState(moment().format('HH:mm:ss'));
   useEffect(() => {
     const timeFormated = moment(nowTime, 'HH:mm:ss');
 

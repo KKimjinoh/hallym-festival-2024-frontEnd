@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Header, Background } from '@/Layout';
-import BingoInfo from '../../components/Modal/BingoInfo/BingoInfo.jsx';
-import EventsModal from '../../components/Modal/EventsModal/EventsModal.jsx';
+import BingoInfo from '@/Layout/Modal/BingoInfo/BingoInfo.jsx';
+import EventsModal from '@/Layout/Modal/EventsModal/EventsModal.jsx';
 import { useNavigate } from 'react-router-dom';
 import './index.module.scss';
-import correctImage from '../../assets/icon/hallym.png';
-import wrongImage from '../../assets/icon/hallymgray.png';
+import correctImage from '@/assets/icon/hallym.png';
+import wrongImage from '@/assets/icon/hallymgray.png';
 
 const Bingo = () => {
   const initialBoard = [

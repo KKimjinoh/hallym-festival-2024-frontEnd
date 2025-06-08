@@ -1,6 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
-import './promotionalVideo.scss';
+import './index.module.scss';
 import { Header, Background } from '@/Layout';
 import { useNavigate } from 'react-router-dom';
 

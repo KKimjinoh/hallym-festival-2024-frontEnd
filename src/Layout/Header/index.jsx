@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.scss';
+import './index.module.scss';
 import { useNavigate } from 'react-router-dom';
 const Header = ({ headcenter, hasGidam }) => {
   const navigate = useNavigate();

@@ -1,7 +1,6 @@
 import React from 'react';
-import './Background.css';
 import logo1 from '../../assets/logo1.webp';
-
+import './index.module.css';
 const Background = ({ hasLogo, hasGidam, hasPub }) => {
   return (
     <div className={`${hasGidam ? 'hasGidam' : ''} ${hasPub ? 'hasPub' : ''} backgroundStyle`}>

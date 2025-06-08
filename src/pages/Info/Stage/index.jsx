@@ -1,10 +1,10 @@
 import React from 'react';
 import { Header, Background } from '@/Layout';
-import ModalContent from '../../components/Modal/ModalContent/ModalContent.jsx';
-import { useTimetable } from '../../hooks/useTimetable.js';
-import timetable from '../../datas/timetable.json';
-import arrowLeft from '../../assets/icon/arrow-left.png';
-import arrowRight from '../../assets/icon/arrow-right.png';
+import ModalContent from '@/Layout/Modal/ModalContent/ModalContent.jsx';
+import { useTimetable } from '@/hooks/useTimetable';
+import timetable from '@/datas/timetable.json';
+import arrowLeft from '@/assets/icon/arrow-left.png';
+import arrowRight from '@/assets/icon/arrow-right.png';
 import './index.module.scss';
 const Stage = ({ value }) => {
   const { pageIndex, setPageIndex, dateArr } = useTimetable(value, 0, timetable);

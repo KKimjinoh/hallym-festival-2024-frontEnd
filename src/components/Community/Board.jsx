@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './CommunityBoard.scss';
-import CommuDelete from '../Modal/Community/CommuDelete.jsx';
+import './Board.scss';
+import CommuDelete from '@/Layout/Modal/Community/CommuDelete.jsx';
 import { getCommunity } from '../../apis/axios.js';
 
 function parseDateTime(dateTimeStr) {

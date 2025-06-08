@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.module.scss';
 import { Header, Background } from '@/Layout';
-import goods from '../../datas/goods.json';
+import goods from '@/datas/goods.json';
 
 const Goods = () => {
   const [data, setData] = useState([]);

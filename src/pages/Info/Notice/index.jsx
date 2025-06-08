@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './index.module.scss';
-import { getNoticeList } from '../../apis/axios.js';
+import { getNoticeList } from '@/apis/axios';
 import { Header, Background } from '@/Layout';
 
 const Notice = () => {

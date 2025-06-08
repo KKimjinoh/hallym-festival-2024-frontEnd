@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Header, Background } from '@/Layout';
 import CommunityBoard from '../../components/Community/Board.jsx';
-import CommuModal from '../../components/Modal/Community/CommuModal.jsx';
-import './index.module.scsss';
+import CommuModal from '@/Layout/Modal/Community/CommuModal.jsx';
+import './index.module.scss';
 
 const Community = () => {
   const clickOut = () => {

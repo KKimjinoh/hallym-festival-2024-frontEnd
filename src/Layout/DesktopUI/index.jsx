@@ -1,5 +1,5 @@
 import React from 'react';
-import './QR.scss';
+import './index.module.scss';
 import QRImage from '../../assets/qr0522.png';
 import Logo2 from '../../assets/logo2.png';
 const DesktopUI = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../../components/Layout/Footer';
+import Footer from '@/Layout/Footer';
 import './index.module.scss';
 import { getLostList } from '../../apis/axios.js';
 import { Header, Background } from '@/Layout';
